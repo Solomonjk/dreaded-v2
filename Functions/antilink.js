@@ -11,7 +11,7 @@ m.reply("Group link detected");
                 participant: kid
             }
         });
-        await client.groupParticipantsUpdate(m.chat, [kid], 'remove');
+        await client.groupParticipantsUpdate(m.chat, [kid], 'warn');
         await client.sendMessage(m.chat, {
             text: `Removed!\n\n@${kid.split("@")[0]} sending group links is prohibited!`,
             contextInfo: {

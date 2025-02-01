@@ -5,7 +5,7 @@ module.exports = async (context) => {
 
 
 
-if (!m.quoted) return m.reply("quote a viewonce message eh")
+if (!m.quoted) return m.reply("quote a viewonce message")
 
 if (m.quoted.message) {
             let type = Object.keys(m.quoted.message)[0]
@@ -14,11 +14,11 @@ if (m.quoted.message) {
             if (/video/.test(type)) {
 
 
-               await client.sendMessage(m.chat, { video: media, caption: `Retrieved by Dreaded! 🦄\nOriginal caption: ${q.caption}`}, { quoted: m})
+               await client.sendMessage(m.chat, { video: media, caption: `Viewonce Opened By Wisdom AI ChatBot 🤖 ${q.caption}`}, { quoted: m})
 
             } else if (/image/.test(type)) {
 
-await client.sendMessage(m.chat, { image: media, caption: `Retrieved by Dreaded! 🦄\nOriginal caption: ${q.caption}`}, { quoted: m})
+await client.sendMessage(m.chat, { image: media, caption: `Viewonce Opened By Wisdom AI ChatBot 🤖 ${q.caption}`}, { quoted: m})
 
             }
          } else m.reply("That is not a viewonce media. . .")
